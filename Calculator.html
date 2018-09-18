@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="jquery-3.2.1.js" ></script>
+<meta charset="utf-8">
+<title>Calculator</title>
+<p><b><font size="5">Кредитный калькулятор</font></p></b><br>
+</head>
+<body >
+<form id="form" >
+    Выберите вид платежа:
+    <select id="typeCredit"> 
+        <option value="1"> аннуитетный </option>
+        <option value="2">дифференцированный</option>
+        
+    </select>
+<p><b>Сумма кредита:</b><br>
+   <input   type = "text" id = "sum" size = "15"   > руб
+</p>
+
+<p><b>Процентная ставка:</b><br>
+   <input   type = "text" id = "percent" size = "4" > % годовых
+</p>
+
+<p><b>Срок кредита: </b><br>
+   <input value = "1" type = "number" id = "termYear" min = "0" max = "100"  > год(а)
+   <input value = "0" type = "number" id = "termMonth" min = "0" max = "36"> мес
+</p>
+
+<p>
+     <input  id = "calc" type = "button" value = "Рассчитать" onclick = "typePay()"   > 
+</p>
+
+<p>
+    Плановый платёж: <output id="planPay"> </output> 
+</p>
+
+<p>
+    Ежемесячный платёж: <output id="standPay" size="4"></output> 
+</p>
+
+<p> 
+    Переплата: <output id="overPay"></output> 
+</p>
+  <p>
+    <table id="tab" border="1">
+        <th id="month" >№</th>
+        <th id="standPayTab" > Ежемесячный платёж</th>
+        <th id="creditPercentTab" > Проценты по кредиту</th>
+        <th id="debtTab" > Сумма в оплату долга</th>
+        <th id="remainTable" > Остаток задолженности</th>
+    </table>
+</p>  
+
+ <script  src ="Calculator.js" defer > </script> 
+</form>
+</body>
+</html>
